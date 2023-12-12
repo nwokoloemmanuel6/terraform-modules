@@ -14,8 +14,7 @@ resource "aws_instance" "instance" {
               sudo apt-get install docker.io -y
               sudo systemctl start docker
               sudo systemctl enable docker
-              sudo docker pull alpine
-              sudo docker run -dit --name alpine -v ~/terraform-modules:/ansible/playbooks alpine /bin/bash
+              sudo apt-get ansible -y
               EOF
 
   tags = {
