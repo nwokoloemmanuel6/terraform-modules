@@ -14,7 +14,7 @@ resource "aws_instance" "instance" {
               sudo apt-get install docker.io -y
               sudo systemctl start docker
               sudo systemctl enable docker
-              sudo apt-get ansible -y
+              sudo apt install ansible -y
               EOF
 
   tags = {
